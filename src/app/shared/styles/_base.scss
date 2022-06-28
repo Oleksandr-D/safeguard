@@ -1,0 +1,41 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   border: 0;
+ }
+ 
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+ 
+ ol,
+ ul {
+   list-style: none;
+ }
+ 
+ table {
+   border-collapse: collapse;
+   border-spacing: 0;
+ }
+ 
+ a {
+   background-color: transparent;
+   text-decoration: none;
+   color: inherit;
+   cursor: pointer;
+ }
+ 
+ b,
+ strong {
+   font-weight: bolder;
+ }
+ 
+ img {
+   border-style: none;
+ }
+ 
+ address{
+   font-style: inherit;
+ }

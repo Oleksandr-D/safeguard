@@ -1,0 +1,15 @@
+app/
+    components/
+        header.component
+    pages/
+        home.component
+        about.component
+        what-we-do.component
+        contact.component
+    shared/
+        styles/
+            _variables.scss
+            _mixins.scss
+            _base.scss
+        interfaces/
+        services/      
