@@ -39,3 +39,8 @@
  address{
    font-style: inherit;
  }
+ textarea:focus,
+ input:focus {
+  outline: none;
+
+}
