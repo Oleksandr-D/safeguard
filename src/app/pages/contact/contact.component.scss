@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   font-family: $main-font;
+  background-color: $main-back;
 }
 
 .wraper-title {
@@ -34,9 +35,15 @@
     height: 65px;
     border-radius: 16px;
     font-size: 18px;
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+    transition: .5s;
   }
+
+  button:hover {
+    background-color: $main-back;
+  }
+
 }
 
 .title {
@@ -56,10 +63,16 @@
 .banner {
   display: flex;
   margin: 32px 0px 0px 0px;
+  overflow: hidden;
+}
 
-  img {
-    margin-right: -7px;
-  }
+.banner-image {
+  width: 826px;
+  height: 647px;
+  background-image: url('../../../assets/Images/space-helmetf 5.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 8px 2px;
 }
 
 .spacer {
@@ -92,7 +105,7 @@
 
 .wraper-form {
   margin-top: 30px;
-  width: 100;
+  width: 100%;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
   border-radius: 30px;
 }
@@ -139,5 +152,143 @@ form {
     font-weight: 500;
     font-size: 16px;
     line-height: 18px;
+    transition: .5s;
   }
+
+  button:hover {
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+.spacer-63 {
+  height: 63px;
+}
+
+@media screen and (max-width:1474px) {
+
+  .container-top {
+    justify-content: center;
+  }
+
+  .title {
+    width: 70%;
+  }
+
+  .banner {
+    width: 60%;
+    margin: 0px;
+
+    img {
+      background-image: url('../../../assets/Images/space-helmetf 5.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      margin-right: 0px;
+    }
+  }
+
+  form {
+    font-family: $main-font;
+    width: 100%;
+    height: 819px;
+  }
+
+}
+
+@media screen and (max-width:1027px) {
+  .container-lower {
+    width: 90%;
+  }
+
+  .container-top {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .wraper-title {
+    width: 100%;
+    height: 100%;
+  }
+
+  .title {
+    margin: 0px;
+  }
+
+  .wraper-info {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .info {
+    width: 70%;
+  }
+
+  .banner {
+    width: 80%;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .banner-image {
+    width: 100%;
+    background-position: 60px 2px;
+  }
+
+
+  form {
+
+
+    input,
+    textarea {
+      width: 100%;
+      height: 100%;
+      border-bottom: 2px solid $main-text;
+      margin-bottom: 56px;
+      resize: none;
+    }
+
+  }
+
+
+
+
+}
+
+@media screen and (max-width:640px) {
+  form {
+    padding: 46px 20px 70px 20px;
+
+    input,
+    textarea {
+      width: 100%;
+      height: 100%;
+      border-bottom: 2px solid $main-text;
+      margin-bottom: 56px;
+      resize: none;
+    }
+
+ 
+
+  }
+
+
+  button {
+    width: 50%;
+    width: 176px;
+    height: 65px;
+    border-radius: 16px;
+    font-size: 18px;
+    background-color: #FFFFFF;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+    transition: .5s;
+  }
+
+  button:hover {
+    background-color: $main-back;
+  }
+
 }

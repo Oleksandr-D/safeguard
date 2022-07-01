@@ -59,3 +59,39 @@ nav {
 .route-active {
   background-color: white;
 }
+
+@media screen and (max-width:1474px) {
+
+  ul li a {
+    width: 100%;
+    height: 50px;
+    padding: 14px;
+
+  }
+
+
+}
+
+@media screen and (max-width:1027px) {
+nav{
+  margin-left: 0%;
+
+  ul {
+    width: 100%;
+  }
+}
+
+}
+
+
+@media screen and (max-width:640px) {
+
+  .wraper-logo {
+    span{
+      width: 160.78px;
+      height: 32.89px;
+      background-image: url('../../../assets/Images/logo white mob.png');
+    }
+  }
+
+}
