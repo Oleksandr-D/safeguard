@@ -1,6 +1,6 @@
 @import '../../shared/styles/variables';
 
-header {
+.header-desktop {
   width: 100%;
   height: 141px;
   background-color: $main-back;
@@ -12,6 +12,9 @@ header {
   position: relative;
 }
 
+.header-mobile {
+  display: none;
+}
 
 .wraper-logo {
   display: flex;
@@ -66,32 +69,60 @@ nav {
     width: 100%;
     height: 50px;
     padding: 14px;
-
   }
-
-
 }
 
 @media screen and (max-width:1027px) {
-nav{
-  margin-left: 0%;
+  nav {
+    margin-left: 0%;
 
-  ul {
-    width: 100%;
+    ul {
+      width: 100%;
+    }
   }
-}
 
 }
 
 
 @media screen and (max-width:640px) {
+  .header-desktop {
+    display: none;
+  }
 
-  .wraper-logo {
-    span{
-      width: 160.78px;
-      height: 32.89px;
-      background-image: url('../../../assets/Images/logo white mob.png');
+  .header-mobile {
+    display: flex;
+    width: 100%;
+    height: 115px;
+    background-color: $main-back;
+    font-family: $main-font;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $main-text;
+    position: relative;
+
+    a {
+      margin-left: 25px;
     }
   }
+
+  .nav-wraper {
+    margin-right: 10px;
+  }
+
+  .wraper-logo {
+    span {
+      width: 162px;
+      height: 32.89px;
+      background-image: url('../../../assets/Images/logo-white 1.png');
+    }
+  }
+
+  .burger-menu {
+    background-image: url('../../../assets/Images/Group 106.png');
+    width: 30px;
+    height: 19px;
+  }
+
 
 }
