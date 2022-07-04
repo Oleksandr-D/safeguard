@@ -193,7 +193,6 @@ form {
     width: 100%;
     height: 819px;
   }
-
 }
 
 @media screen and (max-width:1027px) {
@@ -238,7 +237,6 @@ form {
     background-position: 60px 2px;
   }
 
-
   form {
     width: 100%;
     height: 100%;
@@ -251,12 +249,7 @@ form {
       margin-bottom: 56px;
       resize: none;
     }
-
   }
-
-
-
-
 }
 
 @media screen and (max-width:640px) {
@@ -271,11 +264,7 @@ form {
       margin-bottom: 56px;
       resize: none;
     }
-
- 
-
   }
-
 
   button {
     width: 50%;
@@ -290,6 +279,60 @@ form {
 
   button:hover {
     background-color: $main-back;
+  }
+
+  .wraper-title {
+    width: 87%;
+    align-items: flex-start;
+  }
+
+  .title {
+    width: 270.64px;
+    height: 109px;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 130%;
+    margin: 23px 0px 0px 0px;
+  }
+
+  .info {
+    height: 100%;
+    margin: 26px 0px 0px 0px;
+
+    button {
+      width: 154px;
+      height: 55px;
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 16px;
+      margin-top: 30px;
+      font-family: $main-font;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+
+  .title-text {
+    width: 300px;
+    height: 66px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 160%;
+    margin: 0px;
+  }
+
+  .wraper-info {
+    display: block;
+  }
+
+  .banner {
+    width: 100%;
+  }
+
+  .banner-image {
+    width: 92%;
+    background-image: url('../../../assets/Images/space-helmetf 2.png');
+    background-position: 25px 50px;
   }
 
 }
