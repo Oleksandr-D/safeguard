@@ -101,6 +101,7 @@
     text-transform: uppercase;
     margin-left: 14px;
   }
+
 }
 
 .wraper-form {
@@ -331,8 +332,76 @@ form {
 
   .banner-image {
     width: 92%;
+    height: 387px;
     background-image: url('../../../assets/Images/space-helmetf 2.png');
     background-position: 25px 50px;
   }
+
+  .spacer {
+    height: 27px;
+  }
+
+  .lower-head {
+    h1 {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 48px;
+    }
+  }
+
+  .lower-head {
+    display: inline-flex;
+    font-family: 'Anton';
+    margin-left: 6px;
+
+    h1:nth-child(1) {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 48px;
+    }
+
+    h1:nth-child(2) {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 48px;
+      margin-left: 8px;
+    }
+
+  }
+
+
+  .wraper-form {
+    margin-top: 0px;
+  }
+
+  form {
+    // width: 327px;
+    // height: 480px;
+    padding: 37px 0px 70px 30px;
+
+
+    input,
+    textarea {
+      width: 275px;
+      height: 37px;
+      border-bottom: 2px solid $main-text;
+      margin-bottom: 22px;
+      resize: none;
+    }
+
+    p {
+      display: none;
+    }
+
+    button {
+      width: 154px;
+      height: 55px;
+      margin: 10px 0px 0px 62px;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 500;
+    }
+  }
+
 
 }
