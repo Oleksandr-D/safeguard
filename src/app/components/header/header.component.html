@@ -30,9 +30,20 @@
     </div>
   </a>
   <nav class="nav-wraper">
-    <div class="burger-menu"></div>
-
+    <div class="burger-menu" (click)="showModal()"></div>
   </nav>
+  <ng-container *ngIf="openMenu">
+    <div class="show-burger-menu">
+      <div class="menu-head">
+        <div class="menu-mobile-logo"></div>
+        <div class="close-menu" (click)="showModal()">
+          <div></div>
+          <p></p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
 
 
 </header>
