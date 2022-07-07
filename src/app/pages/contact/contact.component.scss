@@ -101,7 +101,6 @@
     text-transform: uppercase;
     margin-left: 14px;
   }
-
 }
 
 .wraper-form {
@@ -120,7 +119,6 @@ form {
 
   label {
     font-size: 12px;
-    color: #EF2828;
     text-transform: capitalize;
     font-weight: 400;
   }
@@ -253,6 +251,7 @@ form {
   }
 }
 
+
 @media screen and (max-width:640px) {
   form {
     padding: 46px 20px 70px 20px;
@@ -264,6 +263,10 @@ form {
       border-bottom: 2px solid $main-text;
       margin-bottom: 56px;
       resize: none;
+    }
+
+    p {
+      display: none;
     }
   }
 
@@ -281,6 +284,13 @@ form {
   button:hover {
     background-color: $main-back;
   }
+
+  .banner-image {
+    height: 50vh;
+  }
+}
+
+@media screen and (max-width:425px) {
 
   .wraper-title {
     width: 87%;
@@ -334,6 +344,7 @@ form {
     width: 92%;
     height: 387px;
     background-image: url('../../../assets/Images/space-helmetf 2.png');
+    background-size: initial;
     background-position: 25px 50px;
   }
 
@@ -342,22 +353,16 @@ form {
   }
 
   .lower-head {
-    h1 {
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 48px;
-    }
-  }
-
-  .lower-head {
+    width: 100%;
     display: inline-flex;
     font-family: 'Anton';
-    margin-left: 6px;
+    margin-left: 0px;
 
     h1:nth-child(1) {
       font-weight: 400;
       font-size: 32px;
       line-height: 48px;
+      margin-left: 24px;
     }
 
     h1:nth-child(2) {
@@ -369,16 +374,25 @@ form {
 
   }
 
+  .container-lower {
+    width: 100%;
+  }
+
+  .scroll {
+    background-image: url('../../../assets/Images/scrol-mobile.png');
+    width: 100%;
+    height: 40px;
+    background-repeat: no-repeat;
+    margin-left: 41%;
+  }
 
   .wraper-form {
     margin-top: 0px;
+    padding: 0px 17px;
   }
 
   form {
-    // width: 327px;
-    // height: 480px;
     padding: 37px 0px 70px 30px;
-
 
     input,
     textarea {
@@ -387,10 +401,6 @@ form {
       border-bottom: 2px solid $main-text;
       margin-bottom: 22px;
       resize: none;
-    }
-
-    p {
-      display: none;
     }
 
     button {
@@ -402,6 +412,42 @@ form {
       font-weight: 500;
     }
   }
+}
 
 
+@media screen and (max-width:370px) {
+  .title {
+    width: 100%;
+    height: 100%;
+  }
+
+  form {
+    padding: 50px 0px 50px 0px;
+    align-items: center;
+
+    label {
+      width: 100%;
+      text-align: start;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+    }
+
+    button {
+      width: 70%;
+      height: 55px;
+      margin: 0px;
+    }
+  }
+
+  .scroll {
+    margin-left: 30%;
+  }
+
+  .title-text {
+    width: 100%;
+    height: 100%;
+  }
 }
