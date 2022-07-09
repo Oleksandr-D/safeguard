@@ -41,9 +41,34 @@
           <p></p>
         </div>
       </div>
+      <nav class="mobile-nav">
+        <ul>
+          <li>
+            <a [routerLink]="['/home']" routerLinkActive="route-active" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a [routerLink]="['/work']" routerLinkActive="route-active" aria-current="page">What we do</a>
+          </li>
+          <li>
+            <a [routerLink]="['/about']" routerLinkActive="route-active" aria-current="page">About us</a>
+          </li>
+          <li>
+            <a>Our history</a>
+          </li>
+          <li>
+            <a [routerLink]="['/contact']" routerLinkActive="route-active" aria-current="page">Contact us</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="footer-menu">
+        <div class="footer-wraper">
+          <h4>Services</h4>
+          <p>Training and Implementation</p>
+          <p>Cyber Consultants</p>
+          <p>Consultancy and brand protection</p>
+          <p>Software</p>
+        </div>
+      </div>
     </div>
   </ng-container>
-
-
-
 </header>

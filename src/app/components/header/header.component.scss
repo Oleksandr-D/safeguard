@@ -54,7 +54,7 @@ nav {
 
     a:hover {
       transition: 0.3s;
-      background-color: white;
+      text-shadow: 0px 2px 4px rgb(77, 77, 77);
     }
   }
 }
@@ -130,8 +130,9 @@ nav {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 100vh;
+    height: 812px;
     background-color: $main-back;
+    box-shadow: 0px 2px 7px 0px $main-text;
   }
 
   .menu-head {
@@ -172,4 +173,46 @@ nav {
     }
   }
 
+  .mobile-nav {
+    margin-top: 54px;
+
+    ul {
+      flex-direction: column;
+
+      li {
+        margin-bottom: 27px;
+
+        a {
+          font-family: 'Ubuntu';
+          font-weight: bold;
+          font-size: 24px;
+          line-height: 24px;
+          margin-left: 17px;
+        }
+      }
+    }
+  }
+
+  .footer-menu {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+  }
+
+  .footer-wraper {
+    width: 79%;
+    font-size: 24px;
+
+    h4 {
+      font-size: 18px;
+      opacity: 0.5;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 27px;
+    }
+  }
 }
