@@ -10,7 +10,7 @@ import {
 })
 export class HeaderComponent implements OnInit {
 
-  openMenu = true;
+  openMenu = false;
 
   constructor() {}
 

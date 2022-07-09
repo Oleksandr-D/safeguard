@@ -44,19 +44,23 @@
       <nav class="mobile-nav">
         <ul>
           <li>
-            <a [routerLink]="['/home']" routerLinkActive="route-active" aria-current="page">Home</a>
+            <a [routerLink]="['/home']" routerLinkActive="route-active" aria-current="page"
+              (click)="showModal()">Home</a>
           </li>
           <li>
-            <a [routerLink]="['/work']" routerLinkActive="route-active" aria-current="page">What we do</a>
+            <a [routerLink]="['/work']" routerLinkActive="route-active" aria-current="page" (click)="showModal()">What
+              we do</a>
           </li>
           <li>
-            <a [routerLink]="['/about']" routerLinkActive="route-active" aria-current="page">About us</a>
+            <a [routerLink]="['/about']" routerLinkActive="route-active" aria-current="page" (click)="showModal()">About
+              us</a>
           </li>
           <li>
-            <a>Our history</a>
+            <a (click)="showModal()">Our history</a>
           </li>
           <li>
-            <a [routerLink]="['/contact']" routerLinkActive="route-active" aria-current="page">Contact us</a>
+            <a [routerLink]="['/contact']" routerLinkActive="route-active" aria-current="page"
+              (click)="showModal()">Contact us</a>
           </li>
         </ul>
       </nav>

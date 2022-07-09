@@ -18,25 +18,25 @@
   <div class="lower-head">
     <h1>contact</h1>
     <h1>us</h1>
-    <div class="scroll"></div>
+    <div class="scroll" (click)="scrlTop()"></div>
   </div>
   <div class="wraper-form">
-    <form>
+    <form [formGroup]="contactForm" (ngSubmit)="sendMesg()" >
       <label for="fname">Full name</label>
-      <input type="text" id="fname" name="fname" required>
+      <input formControlName="fname" type="text" id="fname" name="fname" required>
       <label for="cname">Company name</label>
-      <input type="text" id="cname" name="cname" required>
+      <input formControlName="cname" type="text" id="cname" name="cname" required>
       <label for="pnumber">Phone number</label>
-      <input type="number" id="pnumber" name="pnumber" required>
+      <input formControlName="pnumber" type="number" id="pnumber" name="pnumber" required>
       <label for="email">E-mail</label>
-      <input type="email" id="email" required>
-      <label for="fname">write us messages</label>
+      <input formControlName="email" type="email" id="email" required>
+      <label for="message">write us messages</label>
       <p>With our global footprint and our specialized team members and partners
         we know what it takes to make sure that we can deliver a minimum risk
         environment for our clients.
       </p>
-      <textarea name="message" id="fname"></textarea>
-      <button>Send Message</button>
+      <textarea formControlName="userMessage"  name="message" id="message"></textarea>
+      <button [disabled]="contactForm.invalid" type="submit">Send Message</button>
 
     </form>
   </div>
