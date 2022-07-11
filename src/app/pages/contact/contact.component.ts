@@ -18,14 +18,14 @@ import {
 })
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
- 
+
   nameRegExp: RegExp = /^[A-Za-zА-Яа-я]{5,40}$/;
-  conpanyRegExp: RegExp = /^[A-Za-zА-Яа-я]{3,30}$/;
+  companyRegExp: RegExp = /^[A-Za-zА-Яа-я]{5,45}$/;
   phoneRegExp: RegExp = /^[0-9]{13,14}$/;
   emailRegExp: RegExp = /^[a-z0-9_.&#]+[^\s@]+@[^\s@]+[.][^\s@\W]{1,3}$/;
   status = false;
   name!: any;
-  conpany!: any;
+  company!: any;
   phone!: any;
   email!: any;
 
@@ -58,25 +58,25 @@ export class ContactComponent implements OnInit {
 
   sendMesg(): void {
     console.log(this.contactForm.value.fname)
-    this.checkSignIn();
+    this.checkForm();
     this.contactForm.reset();
   }
 
-  checkSignIn():void{
+  checkForm(): void {
     this.name = this.nameRegExp.test(this.contactForm.value.fname);
-    this.conpany = this.conpanyRegExp.test(this.contactForm.value.cname);
-    console.log('Works ==>', this.status);
-    if (this.name && this.conpany) {
+    this.company = this.companyRegExp.test(this.contactForm.value.cname);
+    console.log('name ==>', this.name);
+    console.log('conpany ==>', this.company);
+    if (this.name && this.company) {
       this.status = false;
       // return this.status;
     } else {
       this.status = true;
-    
       // return this.status;
 
     };
-    
-    
+
+
   }
 
 }

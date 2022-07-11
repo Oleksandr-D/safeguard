@@ -21,24 +21,30 @@
     <div class="scroll" (click)="scrlTop()"></div>
   </div>
   <div class="wraper-form">
-    <form [formGroup]="contactForm" (ngSubmit)="sendMesg()" >
+    <form [formGroup]="contactForm" (ngSubmit)="sendMesg()">
       <label for="fname">Full name</label>
-      <input formControlName="fname" type="text" id="fname" name="fname" required="Full name is required">
-           <div *ngIf="status">Full Name is required</div>
+      <input [ngClass]="{'red-border':status}" formControlName="fname" type="text"
+             id="fname" name="fname" required="Full name is required">
+      <div class="error-name" *ngIf="status">Full Name is required</div>
       <label for="cname">Company name</label>
-      <input formControlName="cname" type="text" id="cname" name="cname" required>
-      <div *ngIf="status">Company Name is required</div>
+      <input [ngClass]="{'red-border':status}" formControlName="cname" type="text"
+             id="cname" name="cname" required>
+      <div class="error-company" *ngIf="status">Company Name is required</div>
       <label for="pnumber">Phone number</label>
-      <input formControlName="pnumber" type="number" id="pnumber" name="pnumber" required>
+      <input [ngClass]="{'red-border':status}" formControlName="pnumber" type="number"
+             id="pnumber" name="pnumber" required>
+      <div class="error-phone" *ngIf="status">Phone Number is invalid</div>
       <label for="email">E-mail</label>
-      <input formControlName="email" type="email" id="email" required>
+      <input [ngClass]="{'red-border':status}" formControlName="email" type="email"
+             id="email" required>
+      <div class="error-email" *ngIf="status">Email is invalid</div>
       <label for="message">write us messages</label>
       <p>With our global footprint and our specialized team members and partners
         we know what it takes to make sure that we can deliver a minimum risk
         environment for our clients.
       </p>
-      <textarea formControlName="userMessage"  name="message" id="message"></textarea>
-      <button  type="submit">Send Message</button>
+      <textarea formControlName="userMessage" name="message" id="message"></textarea>
+      <button type="submit">Send Message</button>
 
     </form>
   </div>
