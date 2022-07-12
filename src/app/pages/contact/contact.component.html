@@ -23,28 +23,28 @@
   <div class="wraper-form">
     <form [formGroup]="contactForm" (ngSubmit)="sendMesg()">
       <label for="fname">Full name</label>
-      <input [ngClass]="{'red-border':status}" formControlName="fname" type="text"
-             id="fname" name="fname" required="Full name is required">
-      <div class="error-name" *ngIf="status">Full Name is required</div>
+      <input (keyup)="validateName()" [ngClass]="{'red-border':statusName}" formControlName="fname"
+              type="text" id="fname" name="fname" required>
+      <div class="error-name" *ngIf="statusName">Full Name is required</div>
       <label for="cname">Company name</label>
-      <input [ngClass]="{'red-border':status}" formControlName="cname" type="text"
-             id="cname" name="cname" required>
-      <div class="error-company" *ngIf="status">Company Name is required</div>
+      <input (keyup)="validateCompany()" [ngClass]="{'red-border':statusCompany}" formControlName="cname"
+             type="text" id="cname" name="cname" required>
+      <div class="error-company" *ngIf="statusCompany">Company Name is required</div>
       <label for="pnumber">Phone number</label>
-      <input [ngClass]="{'red-border':status}" formControlName="pnumber" type="number"
-             id="pnumber" name="pnumber" required>
-      <div class="error-phone" *ngIf="status">Phone Number is invalid</div>
+      <input (keyup)="validatePhone()" [ngClass]="{'red-border':statusPhone}" formControlName="pnumber"
+             type="number" id="pnumber" name="pnumber" pattern="^[0-9]{13,14}$" required>
+      <div class="error-phone" *ngIf="statusPhone">Phone Number is invalid</div>
       <label for="email">E-mail</label>
-      <input [ngClass]="{'red-border':status}" formControlName="email" type="email"
-             id="email" required>
-      <div class="error-email" *ngIf="status">Email is invalid</div>
+      <input (keyup)="validateEmail()" [ngClass]="{'red-border':statusEmail}" formControlName="email"
+             type="email" id="email" required>
+      <div class="error-email" *ngIf="statusEmail">Email is invalid</div>
       <label for="message">write us messages</label>
       <p>With our global footprint and our specialized team members and partners
         we know what it takes to make sure that we can deliver a minimum risk
         environment for our clients.
       </p>
       <textarea formControlName="userMessage" name="message" id="message"></textarea>
-      <button type="submit">Send Message</button>
+      <button  type="submit">Send Message</button>
 
     </form>
   </div>

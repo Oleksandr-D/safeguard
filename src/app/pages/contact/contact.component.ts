@@ -19,16 +19,19 @@ import {
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
 
-  nameRegExp: RegExp = /^[A-Za-zА-Яа-я]{5,40}$/;
-  companyRegExp: RegExp = /^[A-Za-zА-Яа-я]{5,45}$/;
-  phoneRegExp: RegExp = /^[0-9]{13,14}$/;
+  nameRegExp: RegExp = /^([A-Za-zА-Яа-я-']{2,}\s[A-Za-zА-Яа-я]{1,}'?-?[A-Za-zА-Яа-я]{2,}\s?([A-Za-zА-Яа-я]{1,})?)/;
+  companyRegExp: RegExp = /^[A-Za-zА-Яа-я-']{2,}\s?[A-Za-zА-Яа-я]{2,}/;
+  phoneRegExp: RegExp = /^[0-9-+]{10,}$/;
   emailRegExp: RegExp = /^[a-z0-9_.&#]+[^\s@]+@[^\s@]+[.][^\s@\W]{1,3}$/;
-  status = false;
+  statusName = false;
+  statusCompany = false;
+  statusPhone = false;
+  statusEmail = false;
   name!: any;
   company!: any;
   phone!: any;
   email!: any;
-
+  checked = false;
 
   constructor(
     private fb: FormBuilder,
@@ -55,28 +58,56 @@ export class ContactComponent implements OnInit {
     })
   }
 
-
   sendMesg(): void {
-    console.log(this.contactForm.value.fname)
     this.checkForm();
-    this.contactForm.reset();
+  }
+
+  validateName() {
+    this.name = this.nameRegExp.test(this.contactForm.value.fname);
+    if (this.name) {
+      this.statusName = false;
+    } else {
+      this.statusName = true;
+    }
+  };
+
+  validateCompany() {
+    this.company = this.companyRegExp.test(this.contactForm.value.cname);
+    if (this.company) {
+      this.statusCompany = false;
+    } else {
+      this.statusCompany = true;
+    }
+  }
+
+  validatePhone() {
+    this.phone = this.phoneRegExp.test(this.contactForm.value.pnumber);
+    if (this.phone) {
+      this.statusPhone = false;
+    } else {
+      this.statusPhone = true;
+    }
+  }
+
+  validateEmail() {
+    this.email = this.emailRegExp.test(this.contactForm.value.email);
+    if (this.email) {
+      this.statusEmail = false;
+    } else {
+      this.statusEmail = true;
+    }
   }
 
   checkForm(): void {
-    this.name = this.nameRegExp.test(this.contactForm.value.fname);
-    this.company = this.companyRegExp.test(this.contactForm.value.cname);
-    console.log('name ==>', this.name);
-    console.log('conpany ==>', this.company);
-    if (this.name && this.company) {
-      this.status = false;
-      // return this.status;
+    if (this.name && this.company && this.phone && this.email) {
+      this.checked = true;
+      console.log('success', this.contactForm.value);
+
+      this.contactForm.reset();
     } else {
-      this.status = true;
-      // return this.status;
-
-    };
-
-
+      this.checked = false;
+      console.log('error');
+    }
   }
 
 }
