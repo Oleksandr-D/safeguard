@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
 
   nameRegExp: RegExp = /^([A-Za-zА-Яа-я-']{2,}\s[A-Za-zА-Яа-я]{1,}'?-?[A-Za-zА-Яа-я]{2,}\s?([A-Za-zА-Яа-я]{1,})?)/;
   companyRegExp: RegExp = /^[A-Za-zА-Яа-я-']{2,}\s?[A-Za-zА-Яа-я]{2,}/;
-  phoneRegExp: RegExp = /^[0-9-+]{10,}$/;
+  phoneRegExp: RegExp = /^[0-9-+]{12,}$/;
   emailRegExp: RegExp = /^[a-z0-9_.&#]+[^\s@]+@[^\s@]+[.][^\s@\W]{1,3}$/;
   statusName = false;
   statusCompany = false;
