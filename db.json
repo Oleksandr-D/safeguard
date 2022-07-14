@@ -1,0 +1,28 @@
+{
+  "contact": [
+    {
+      "fname": "olecsandr ddd",
+      "cname": "google",
+      "pnumber": 380975483090,
+      "email": "exemple@gmail.com",
+      "userMessage": "hello alex!",
+      "id": 2
+    },
+    {
+      "fname": "d'Are Beaware",
+      "cname": "asus",
+      "pnumber": 809634565123,
+      "email": "french@pres.com",
+      "userMessage": "Helello! you get offer!",
+      "id": 4
+    },
+    {
+      "fname": "Борис Джонсонюк",
+      "cname": "молокія",
+      "pnumber": 380962223344,
+      "email": "admin@gmail.com",
+      "userMessage": "Добрий вечір еврі баді!",
+      "id": 5
+    }
+  ]
+}

@@ -8,6 +8,9 @@ import {
   Validators
 } from '@angular/forms';
 import {
+  IFormResponse
+} from 'src/app/shared/interfaces/form.interface';
+import {
   ValidateFormService
 } from 'src/app/shared/services/validate-form.service';
 
@@ -32,6 +35,7 @@ export class ContactComponent implements OnInit {
   phone!: any;
   email!: any;
   checked = false;
+  usersData: Array < IFormResponse > = [];
 
   constructor(
     private fb: FormBuilder,
@@ -40,6 +44,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
     this.initContactForm();
+    this.getContact();
   }
 
   scrlTop() {
@@ -101,13 +106,23 @@ export class ContactComponent implements OnInit {
   checkForm(): void {
     if (this.name && this.company && this.phone && this.email) {
       this.checked = true;
-      console.log('success', this.contactForm.value);
+      this.validateService.create(this.contactForm.value).subscribe((data) => {
+        console.log('Entered data', data);
+        this.getContact();
+      })
 
       this.contactForm.reset();
     } else {
       this.checked = false;
       console.log('error');
     }
+  }
+
+  getContact(): void {
+    this.validateService.getAll().subscribe(data => {
+      this.usersData = data;
+      console.log('all Users Data', data);
+    })
   }
 
 }
